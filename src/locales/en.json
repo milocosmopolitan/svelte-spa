@@ -1,0 +1,11 @@
+{
+  "page_title": "Page title",
+  "sign_in": "Sign in",
+  "sign_up": "Sign up",
+
+  "languages": {
+    "en": "English",
+    "es": "Spanish",
+    "ko": "Korean"
+  }
+}

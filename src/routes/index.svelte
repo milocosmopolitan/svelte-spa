@@ -1,3 +1,9 @@
+<script lang="ts">
+	import { _ } from 'svelte-i18n';
+	// export let title: string =  "Hello TypeScript";
+    // VS Code will show you an "Unexpected token" error; this is okay at this point
+</script>
+
 <style>
 	h1, figure, p {
 		text-align: center;
@@ -33,7 +39,7 @@
 </style>
 
 <svelte:head>
-	<title>Sapper project template</title>
+	<title>{$_('page_title')}</title>
 </svelte:head>
 
 <h1>Great success!</h1>

@@ -1,4 +1,6 @@
 <script>
+	import LanguageSelector from "./LanguageSelector.svelte";
+	// import { locale } from 'svelte-i18n';
 	export let segment;
 </script>
 
@@ -58,3 +60,5 @@
 		<li><a rel=prefetch aria-current="{segment === 'blog' ? 'page' : undefined}" href="blog">blog</a></li>
 	</ul>
 </nav>
+<!-- <div>Current Locale: {$locale}</div> -->
+<LanguageSelector />
