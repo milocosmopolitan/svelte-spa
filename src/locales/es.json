@@ -1,5 +1,11 @@
 {
   "page_title": "Título da página",
   "sign_in": "Entrar",
-  "sign_up": "Registrar"
+  "sign_up": "Registrar",
+
+  "languages": {
+    "en": "Inglesa",
+    "es": "Español",
+    "ko": "Corean"
+  }
 }

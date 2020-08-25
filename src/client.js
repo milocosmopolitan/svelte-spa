@@ -1,8 +1,7 @@
 import * as sapper from '@sapper/app';
-// import { initializeLocalization } from './services/i18n/i18n.service';
+import { startClient } from './locales/i18n';
 
-// initializeLocalization();
-
+startClient()
 sapper.start({
 	target: document.querySelector('#sapper')
 });

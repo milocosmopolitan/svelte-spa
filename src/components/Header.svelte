@@ -3,5 +3,5 @@
 </script>
 
 <header>
-  <Nav />
+  <Nav segment="page" />
 </header>

@@ -9,12 +9,17 @@ import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
 import livereload from 'rollup-plugin-livereload';
+import json from '@rollup/plugin-json';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
-const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+const onwarn = (warning, onwarn) => {
+	// https://github.com/rollup/rollup/issues/794
+	if (warning.code === 'THIS_IS_UNDEFINED') return;
+	return (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning)
+};
 
 module.exports = {
 	client: {
@@ -47,6 +52,7 @@ module.exports = {
 			}),
 			commonjs(),
 			typescript(),
+			json(),
 
 			dev && livereload('public'),
 
@@ -94,6 +100,7 @@ module.exports = {
 			}),
 			commonjs(),
 			typescript(),
+			json(),
 		],
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 

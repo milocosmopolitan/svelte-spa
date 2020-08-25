@@ -1,7 +1,7 @@
 <script context="module">
 	export function preload({ params, query }) {
 		console.log(params, query)
-		return this.fetch(`blog.json`).then(r => r.json()).then(posts => {
+		return fetch(`blog.json`).then(r => r.json()).then(posts => {
 			return { posts };
 		});
 	}

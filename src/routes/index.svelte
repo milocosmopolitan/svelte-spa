@@ -1,5 +1,6 @@
 <script lang="ts">
-    export let title: string =  "Hello TypeScript"
+	import { _ } from 'svelte-i18n';
+	// export let title: string =  "Hello TypeScript";
     // VS Code will show you an "Unexpected token" error; this is okay at this point
 </script>
 
@@ -38,7 +39,7 @@
 </style>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{$_('page_title')}</title>
 </svelte:head>
 
 <h1>Great success!</h1>

@@ -14,8 +14,7 @@
   "dependencies": {
     "compression": "^1.7.1",
     "polka": "next",
-    "sirv": "^1.0.0",
-    "svelte-i18n": "^3.0.4"
+    "sirv": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -40,6 +39,7 @@
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",
     "svelte-check": "^1.0.0",
+    "svelte-i18n": "^3.0.4",
     "svelte-preprocess": "^4.0.0",
     "tslib": "^2.0.0",
     "typescript": "^3.9.3"
